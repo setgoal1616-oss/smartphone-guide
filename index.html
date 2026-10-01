@@ -4,131 +4,195 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SmartChoice - Best Mobile Phones</title>
+<title>SmartChoice - Best Phones in India</title>
 
 <style>
+
+*{
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f6f8;
-    color:#222;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f6f8;
+color:#222;
 }
 
 header{
-    background:#0757d5;
-    color:white;
-    padding:20px;
+background:#0757d5;
+color:white;
+padding:16px 5%;
 }
 
 .logo{
-    font-size:26px;
-    font-weight:bold;
+font-size:26px;
+font-weight:bold;
 }
 
 nav{
-    margin-top:12px;
+margin-top:12px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-right:15px;
+color:white;
+text-decoration:none;
+margin-right:18px;
+font-size:14px;
 }
 
 .hero{
-    background:white;
-    text-align:center;
-    padding:35px 15px;
+background:white;
+text-align:center;
+padding:35px 15px;
 }
 
 .hero h1{
-    color:#222;
+margin-bottom:8px;
+font-size:30px;
+}
+
+.hero p{
+color:#666;
 }
 
 .search{
-    width:90%;
-    max-width:550px;
-    padding:14px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-    margin-top:15px;
+width:90%;
+max-width:600px;
+padding:14px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+margin-top:15px;
 }
 
 .container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+max-width:1050px;
+margin:auto;
+padding:25px 15px;
 }
 
-.filters{
-    margin-bottom:20px;
+.filter-box{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-.filters button{
-    padding:10px 15px;
-    margin:5px;
-    border:1px solid #ddd;
-    background:white;
-    border-radius:6px;
-    cursor:pointer;
+.filter-box button{
+padding:10px 16px;
+border:1px solid #ddd;
+background:white;
+border-radius:6px;
+cursor:pointer;
 }
 
-.phone{
-    background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px #ddd;
+.filter-box button:hover{
+background:#0757d5;
+color:white;
 }
 
-.phone h2{
-    color:#0757d5;
+.phone-card{
+background:white;
+border-radius:10px;
+margin-bottom:20px;
+padding:20px;
+display:flex;
+gap:25px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.phone-image{
+width:180px;
+height:210px;
+background:#eeeeee;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#777;
+font-size:14px;
+}
+
+.phone-info{
+flex:1;
+}
+
+.phone-info h2{
+color:#0757d5;
+margin-top:0;
+}
+
+.rating{
+color:#f59e0b;
+margin:8px 0;
 }
 
 .price{
-    font-size:24px;
-    font-weight:bold;
-    color:#111;
-    margin:15px 0;
+font-size:25px;
+font-weight:bold;
+margin:12px 0;
 }
 
 .specs{
-    line-height:1.8;
-    color:#555;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+font-size:14px;
+color:#555;
 }
 
-.button{
-    display:inline-block;
-    background:#ff7200;
-    color:white;
-    padding:12px 25px;
-    border-radius:6px;
-    text-decoration:none;
-    margin-top:15px;
-    font-weight:bold;
+.buy{
+display:inline-block;
+background:#ff7200;
+color:white;
+text-decoration:none;
+padding:12px 24px;
+border-radius:6px;
+margin-top:18px;
+font-weight:bold;
+}
+
+.buy:hover{
+background:#e45f00;
 }
 
 footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:25px;
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+font-size:14px;
 }
 
-@media(max-width:600px){
-    .container{
-        padding:12px;
-    }
+@media(max-width:650px){
 
-    .phone{
-        padding:15px;
-    }
+.phone-card{
+flex-direction:column;
 }
+
+.phone-image{
+width:100%;
+height:230px;
+}
+
+.specs{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
+
 
 <header>
 
@@ -137,10 +201,17 @@ SmartChoice
 </div>
 
 <nav>
+
 <a href="#">Home</a>
+
 <a href="#">Mobiles</a>
+
 <a href="#">Under ₹10K</a>
+
 <a href="#">Under ₹20K</a>
+
+<a href="#">About</a>
+
 </nav>
 
 </header>
@@ -148,16 +219,20 @@ SmartChoice
 
 <section class="hero">
 
-<h1>Best Mobile Phones Under ₹20,000</h1>
+<h1>
+Best Mobile Phones Under ₹20,000
+</h1>
 
-<p>Compare mobile phones, specifications and prices.</p>
+<p>
+Compare phones, specifications and prices before buying.
+</p>
 
 <input
 class="search"
 id="search"
 type="text"
-placeholder="Search mobile phone..."
-onkeyup="searchPhone()"
+placeholder="🔍 Search mobile phone..."
+onkeyup="searchPhones()"
 >
 
 </section>
@@ -165,26 +240,49 @@ onkeyup="searchPhone()"
 
 <div class="container">
 
-<div class="filters">
 
-<button onclick="showAll()">All</button>
+<div class="filter-box">
 
-<button onclick="filterPhones(15000)">
+<button onclick="showAll()">
+All Phones
+</button>
+
+<button onclick="filterPrice(15000)">
 Under ₹15,000
 </button>
 
-<button onclick="filterPhones(20000)">
+<button onclick="filterPrice(20000)">
 Under ₹20,000
 </button>
 
 </div>
 
 
-<div class="phone" data-price="14999">
+<!-- PHONE 1 -->
 
-<h2>Samsung Galaxy Example</h2>
+<div class="phone-card" data-price="14999">
 
-<p>⭐ 4.2/5</p>
+<div class="phone-image">
+
+PHONE<br>
+IMAGE
+
+</div>
+
+<div class="phone-info">
+
+<h2>
+Samsung Galaxy Example
+</h2>
+
+<div class="rating">
+★★★★★ 4.3/5
+</div>
+
+<p>
+A budget smartphone with a large display,
+good battery and 5G connectivity.
+</p>
 
 <div class="price">
 ₹14,999
@@ -192,28 +290,58 @@ Under ₹20,000
 
 <div class="specs">
 
-📱 Display: 6.6 inch<br>
-⚡ Processor: Octa Core<br>
-📸 Camera: 50MP<br>
-🔋 Battery: 5000mAh<br>
-💾 RAM: 6GB<br>
-💽 Storage: 128GB<br>
-📡 5G: Yes
+<div>📱 Display: 6.6"</div>
+
+<div>⚡ Processor: Octa Core</div>
+
+<div>📸 Camera: 50MP</div>
+
+<div>🔋 Battery: 5000mAh</div>
+
+<div>💾 RAM: 6GB</div>
+
+<div>💽 Storage: 128GB</div>
+
+<div>📡 Network: 5G</div>
+
+<div>🔌 Charging: Fast Charging</div>
 
 </div>
 
-<a href="#" class="button">
+<a href="#" class="buy">
 CHECK PRICE
 </a>
 
 </div>
 
+</div>
 
-<div class="phone" data-price="17999">
 
-<h2>Motorola Example 5G</h2>
+<!-- PHONE 2 -->
 
-<p>⭐ 4.3/5</p>
+<div class="phone-card" data-price="17999">
+
+<div class="phone-image">
+
+PHONE<br>
+IMAGE
+
+</div>
+
+<div class="phone-info">
+
+<h2>
+Motorola Example 5G
+</h2>
+
+<div class="rating">
+★★★★★ 4.4/5
+</div>
+
+<p>
+A stylish 5G smartphone with a smooth
+display and large battery.
+</p>
 
 <div class="price">
 ₹17,999
@@ -221,28 +349,58 @@ CHECK PRICE
 
 <div class="specs">
 
-📱 Display: 6.7 inch<br>
-⚡ Processor: Octa Core<br>
-📸 Camera: 50MP<br>
-🔋 Battery: 5000mAh<br>
-💾 RAM: 8GB<br>
-💽 Storage: 128GB<br>
-📡 5G: Yes
+<div>📱 Display: 6.7"</div>
+
+<div>⚡ Processor: Octa Core</div>
+
+<div>📸 Camera: 50MP</div>
+
+<div>🔋 Battery: 5000mAh</div>
+
+<div>💾 RAM: 8GB</div>
+
+<div>💽 Storage: 128GB</div>
+
+<div>📡 Network: 5G</div>
+
+<div>🔌 Charging: Fast Charging</div>
 
 </div>
 
-<a href="#" class="button">
+<a href="#" class="buy">
 CHECK PRICE
 </a>
 
 </div>
 
+</div>
 
-<div class="phone" data-price="19999">
 
-<h2>iQOO Example 5G</h2>
+<!-- PHONE 3 -->
 
-<p>⭐ 4.4/5</p>
+<div class="phone-card" data-price="19999">
+
+<div class="phone-image">
+
+PHONE<br>
+IMAGE
+
+</div>
+
+<div class="phone-info">
+
+<h2>
+iQOO Example 5G
+</h2>
+
+<div class="rating">
+★★★★★ 4.5/5
+</div>
+
+<p>
+Performance-focused smartphone suitable
+for gaming and everyday use.
+</p>
 
 <div class="price">
 ₹19,999
@@ -250,17 +408,25 @@ CHECK PRICE
 
 <div class="specs">
 
-📱 Display: 6.7 inch<br>
-⚡ Processor: Octa Core<br>
-📸 Camera: 50MP<br>
-🔋 Battery: 5500mAh<br>
-💾 RAM: 8GB<br>
-💽 Storage: 128GB<br>
-📡 5G: Yes
+<div>📱 Display: 6.7"</div>
+
+<div>⚡ Processor: Octa Core</div>
+
+<div>📸 Camera: 50MP</div>
+
+<div>🔋 Battery: 5500mAh</div>
+
+<div>💾 RAM: 8GB</div>
+
+<div>💽 Storage: 128GB</div>
+
+<div>📡 Network: 5G</div>
+
+<div>🔌 Charging: Fast Charging</div>
 
 </div>
 
-<a href="#" class="button">
+<a href="#" class="buy">
 CHECK PRICE
 </a>
 
@@ -269,12 +435,19 @@ CHECK PRICE
 </div>
 
 
+</div>
+
+
 <footer>
 
-<p>© 2026 SmartChoice</p>
+<p>
+© 2026 SmartChoice
+</p>
 
 <p>
 This website may contain affiliate links.
+If you purchase through a qualifying link,
+we may receive a commission.
 </p>
 
 </footer>
@@ -282,15 +455,15 @@ This website may contain affiliate links.
 
 <script>
 
-function searchPhone(){
+function searchPhones(){
 
-let text =
+let search =
 document.getElementById("search")
 .value
 .toLowerCase();
 
 let phones =
-document.querySelectorAll(".phone");
+document.querySelectorAll(".phone-card");
 
 phones.forEach(function(phone){
 
@@ -299,10 +472,14 @@ phone.querySelector("h2")
 .innerText
 .toLowerCase();
 
-if(name.includes(text)){
-phone.style.display="block";
+if(name.includes(search)){
+
+phone.style.display="flex";
+
 }else{
+
 phone.style.display="none";
+
 }
 
 });
@@ -313,29 +490,35 @@ phone.style.display="none";
 function showAll(){
 
 let phones =
-document.querySelectorAll(".phone");
+document.querySelectorAll(".phone-card");
 
 phones.forEach(function(phone){
-phone.style.display="block";
+
+phone.style.display="flex";
+
 });
 
 }
 
 
-function filterPhones(max){
+function filterPrice(maxPrice){
 
 let phones =
-document.querySelectorAll(".phone");
+document.querySelectorAll(".phone-card");
 
 phones.forEach(function(phone){
 
 let price =
 Number(phone.dataset.price);
 
-if(price <= max){
-phone.style.display="block";
+if(price<=maxPrice){
+
+phone.style.display="flex";
+
 }else{
+
 phone.style.display="none";
+
 }
 
 });
@@ -343,6 +526,7 @@ phone.style.display="none";
 }
 
 </script>
+
 
 </body>
 </html>
