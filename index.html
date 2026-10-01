@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartChoice - Best Mobile Phones</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
+    color:#222;
+}
+
+header{
+    background:#0757d5;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+}
+
+nav{
+    margin-top:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+}
+
+.hero{
+    background:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.hero h1{
+    color:#222;
+}
+
+.search{
+    width:90%;
+    max-width:550px;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-top:15px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.filters{
+    margin-bottom:20px;
+}
+
+.filters button{
+    padding:10px 15px;
+    margin:5px;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.phone{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ddd;
+}
+
+.phone h2{
+    color:#0757d5;
+}
+
+.price{
+    font-size:24px;
+    font-weight:bold;
+    color:#111;
+    margin:15px 0;
+}
+
+.specs{
+    line-height:1.8;
+    color:#555;
+}
+
+.button{
+    display:inline-block;
+    background:#ff7200;
+    color:white;
+    padding:12px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:12px;
+    }
+
+    .phone{
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+SmartChoice
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Mobiles</a>
+<a href="#">Under ₹10K</a>
+<a href="#">Under ₹20K</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Best Mobile Phones Under ₹20,000</h1>
+
+<p>Compare mobile phones, specifications and prices.</p>
+
+<input
+class="search"
+id="search"
+type="text"
+placeholder="Search mobile phone..."
+onkeyup="searchPhone()"
+>
+
+</section>
+
+
+<div class="container">
+
+<div class="filters">
+
+<button onclick="showAll()">All</button>
+
+<button onclick="filterPhones(15000)">
+Under ₹15,000
+</button>
+
+<button onclick="filterPhones(20000)">
+Under ₹20,000
+</button>
+
+</div>
+
+
+<div class="phone" data-price="14999">
+
+<h2>Samsung Galaxy Example</h2>
+
+<p>⭐ 4.2/5</p>
+
+<div class="price">
+₹14,999
+</div>
+
+<div class="specs">
+
+📱 Display: 6.6 inch<br>
+⚡ Processor: Octa Core<br>
+📸 Camera: 50MP<br>
+🔋 Battery: 5000mAh<br>
+💾 RAM: 6GB<br>
+💽 Storage: 128GB<br>
+📡 5G: Yes
+
+</div>
+
+<a href="#" class="button">
+CHECK PRICE
+</a>
+
+</div>
+
+
+<div class="phone" data-price="17999">
+
+<h2>Motorola Example 5G</h2>
+
+<p>⭐ 4.3/5</p>
+
+<div class="price">
+₹17,999
+</div>
+
+<div class="specs">
+
+📱 Display: 6.7 inch<br>
+⚡ Processor: Octa Core<br>
+📸 Camera: 50MP<br>
+🔋 Battery: 5000mAh<br>
+💾 RAM: 8GB<br>
+💽 Storage: 128GB<br>
+📡 5G: Yes
+
+</div>
+
+<a href="#" class="button">
+CHECK PRICE
+</a>
+
+</div>
+
+
+<div class="phone" data-price="19999">
+
+<h2>iQOO Example 5G</h2>
+
+<p>⭐ 4.4/5</p>
+
+<div class="price">
+₹19,999
+</div>
+
+<div class="specs">
+
+📱 Display: 6.7 inch<br>
+⚡ Processor: Octa Core<br>
+📸 Camera: 50MP<br>
+🔋 Battery: 5500mAh<br>
+💾 RAM: 8GB<br>
+💽 Storage: 128GB<br>
+📡 5G: Yes
+
+</div>
+
+<a href="#" class="button">
+CHECK PRICE
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 SmartChoice</p>
+
+<p>
+This website may contain affiliate links.
+</p>
+
+</footer>
+
+
+<script>
+
+function searchPhone(){
+
+let text =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+let phones =
+document.querySelectorAll(".phone");
+
+phones.forEach(function(phone){
+
+let name =
+phone.querySelector("h2")
+.innerText
+.toLowerCase();
+
+if(name.includes(text)){
+phone.style.display="block";
+}else{
+phone.style.display="none";
+}
+
+});
+
+}
+
+
+function showAll(){
+
+let phones =
+document.querySelectorAll(".phone");
+
+phones.forEach(function(phone){
+phone.style.display="block";
+});
+
+}
+
+
+function filterPhones(max){
+
+let phones =
+document.querySelectorAll(".phone");
+
+phones.forEach(function(phone){
+
+let price =
+Number(phone.dataset.price);
+
+if(price <= max){
+phone.style.display="block";
+}else{
+phone.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
